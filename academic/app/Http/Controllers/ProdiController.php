@@ -12,7 +12,12 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        //
+         // panggil model prodi
+        $result = Prodi :: all();
+        //dd($result);
+
+        //kirim data $result ke views prodi.index.blade.php
+        return view('prodi.index')->with('prodi', $result);
     }
 
     /**
