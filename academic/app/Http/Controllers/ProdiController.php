@@ -12,7 +12,7 @@ class ProdiController extends Controller
      */
     public function index()
     {
-         // panggil model prodi
+        // panggil model prodi
         $result = Prodi :: all();
         //dd($result);
 

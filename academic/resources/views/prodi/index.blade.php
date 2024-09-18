@@ -1,7 +1,26 @@
 @extends('layouts.main');
 
 @section('content')
-    @foreach ($prodi as $row )
-        {{$row['nama']}}
-    @endforeach
+    <h4>Prodi</h4>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Nama Prodi</th>
+                <th>Kaprodi</th>
+                <th>Singkatan</th>
+                <th>Fakultas</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach ($prodi as $row )
+                <tr>
+                    <td>{{$row['nama']}}</td>
+                    <td>{{$row['dekan']}}</td>
+                    <td>{{$row['singkatan']}}</td>
+                    <td>{{$row['fakultas']['nama']}}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 @endsection
